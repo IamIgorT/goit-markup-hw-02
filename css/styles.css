@@ -197,7 +197,8 @@ a {
 }
 
 .portfolio-button.current {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--white-color);
 }
 
 .footer-contacts:hover,
