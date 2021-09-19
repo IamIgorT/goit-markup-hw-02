@@ -2,12 +2,19 @@
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --hero-background-color: #2f303a;
+  --hero-button-background-color: #188ce8;
+  --footer-contacts-color: rgb(255, 255, 255, 0.6);
+  --footer-background-color: #2f303a;
 }
 
 body {
-  background-color: #ffffff;
+  background-color: var(--white-color);
   color: var(--primary-text-color);
   font-family: 'Roboto', sans-serif;
+  font-size: 14px;
   letter-spacing: 0.03em;
 }
 
@@ -28,10 +35,6 @@ a {
   text-decoration: none;
 }
 
-.header {
-  background-color: #ffffff;
-}
-
 /*  Логотип  */
 .logo {
   color: var(--accent-color);
@@ -42,57 +45,58 @@ a {
   line-height: 1.19;
 }
 .studio-header-black {
-  color: #000000;
+  color: var(--black-color);
 }
 .studio-footer-white {
-  color: #ffffff;
+  color: var(--white-color);
 }
 
 /* Навигация сайта в шапке */
-.site-nav a {
+.nav-link {
   color: var(--title-text-color);
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.site-nav a:hover,
-.site-nav a:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--accent-color);
 }
-.site-nav a .current {
+.nav-link.current {
   color: var(--accent-color);
 }
 
-.contacts a {
+.contact-link {
   color: var(--primary-text-color);
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.contacts a:hover,
-.contacts a:focus {
+.contact-link:hover,
+.contact-link:focus {
   color: var(--accent-color);
 }
 
 /* ----- Майн ----- */
 /* Герой */
 .hero {
-  background-color: #2f303a;
-  color: #ffffff;
+  background-color: var(--hero-background-color);
+}
+.hero-title {
+  color: var(--white-color);
   font-style: normal;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 .hero-button {
-  background-color: #188ce8;
-  color: #ffffff;
+  background-color: var(--hero-button-background-color);
+  color: var(--white-color);
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -102,6 +106,7 @@ a {
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
+  font-family: inherit;
 }
 
 /* Преимущества, чем мы занимамся, наша команда */
@@ -120,8 +125,8 @@ a {
   color: var(--title-text-color);
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14x;
+  text-transform: uppercase;
 }
 .team-h3 {
   color: var(--title-text-color);
@@ -142,20 +147,18 @@ a {
 
 /* Футер */
 .footer {
-  background-color: #2f303a;
+  background-color: var(--footer-background-color);
 }
 .footer-address {
-  color: #ffffff;
+  color: var(--white-color);
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
   line-height: 1.71;
 }
 .footer-contacts {
-  color: rgb(255, 255, 255, 0.6);
+  color: var(--footer-contacts-color);
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
   line-height: 1.71;
 }
 
@@ -185,9 +188,21 @@ a {
   line-height: 1.62;
   text-align: center;
   cursor: pointer;
+  font-family: inherit;
 }
 .portfolio-button:hover,
 .portfolio-button:focus {
   background-color: var(--accent-color);
-  color: #ffffff;
+  color: var(--white-color);
+}
+
+.portfolio-button.current {
+  color: var(--accent-color);
+}
+
+.footer-contacts:hover,
+.footer-address:hover,
+.footer-contacts:focus,
+.footer-address:focus {
+  color: var(--accent-color);
 }
